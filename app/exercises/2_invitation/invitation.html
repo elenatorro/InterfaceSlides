@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interfaces</title>
+    <meta name="description" content="Gulp Boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
+	  <link rel="stylesheet" href="../../components/themes/spacelab.css">
+    <link rel="stylesheet" href="../../userinterfaces.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container full-container">
+      <section class="row full-container">
+      <asside class="col-lg-5 col-left">
+        <section class="row">
+          <section class="col-md-12 exercises">
+            <h1 id="exercise--title">Title</h1>
+            <ul id="steps" class="steps--list">
+            </ul>
+          </section>
+        </section>
+        <footer>
+            <button class="btn btn-primary" id="previous-step"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+            <button class="btn btn-primary" id="next-step"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            <br>
+            <a class="btn btn-link" id="previous-page"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Previous Page</a>
+            <a class="btn btn-link" id="next-page">Next Page <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+        </footer>
+      </asside>
+
+      <asside class="col-lg-7 col-right">
+        <section class="row">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">App</a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">My Courses <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Preferences <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Tools</a></li>
+                      <li><a href="#">Social</a></li>
+                      <li><a href="#"></a>Settings</li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Know more...</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Help</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Go!</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Contact</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Change Profile</a></li>
+                      <li><a href="#">Your Network</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </section>
+          <section class="row">
+            <section id="invitations-1" class="col-md-10 col-md-offset-1 hidden">
+              <section class="panel panel-warning panel-invitation ">
+                <header class="panel-heading">
+                  Rate the course: 'Learning User Interfaces'
+                </header>
+                <section class="panel-body">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Very Good</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Good</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Ok</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Bad</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Very Bad</p>
+                  </div>
+                  <button id="rate" class="btn btn-success">Rate!</button>
+                  <div id="rated" class="alert alert-success hidden" role="alert">Thanks for rating!</div>
+                </section>
+              </section>
+            </section>
+            <section id="invitations-2" class="col-md-10 col-md-offset-1 hidden">
+              <section class="panel panel-success panel-invitation">
+                <header class="panel-heading">
+                  Do you want to see related courses?
+                </header>
+                <section class="panel-body">
+                <ol>
+                  <li> Click on 'Preferences' and select the fields you're interested in.</li>
+                  <li> Click on 'My Courses' to discover similar courses.</li>
+                  <li> Type any topic in the 'Search' form at the top navigation bar</li>
+                  <li><a href="">Discover this week trending courses!</a></li>
+                </ol>
+                </section>
+              </section>
+            </section>
+          </section>
+      </asside>
+      </section>
+    </section>
+  <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../userinterfaces.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
