@@ -1,0 +1,10 @@
+.steps--list {
+	list-style-type: none;
+	font-size: 3em;
+}
+
+.steps--list {
+	> li {
+		visibility: hidden;
+	}
+}

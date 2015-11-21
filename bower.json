@@ -1,0 +1,30 @@
+{
+  "name": "InterfaceSlides",
+  "description": "Interactive presentation for interface examples",
+  "homepage": "https://github.com/elenatorro/lookjs",
+  "version": "0.1.0",
+  "main": "./lib/Look.js",
+  "authors": [
+    {
+      "name": "Elena Torró",
+      "email": "elenatorro@gmail.com",
+      "homepage": "https://github.com/elenatorro"
+    }
+  ],
+  "repository": "elenatorro/interactiveslides",
+  "bugs": {
+    "url": "https://github.com/elenatorro/interactiveslides/issues"
+  },
+  "keywords": [],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

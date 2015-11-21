@@ -1,0 +1,24 @@
+############################
+# npm
+############################
+node_modules
+bower_components
+.gitattributes
+.editorconfig
+/test
+npm-debug.log
+
+
+############################
+# tmp, editor & OS files
+############################
+.tmp
+*.swo
+*.swp
+*.swn
+*.swm
+.DS_STORE
+*#
+*~
+.idea
+nbproject
