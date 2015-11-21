@@ -1,19 +1,21 @@
 //---- Actions --------------------------
-var stepAction = function() {
-	console.log('holi');
-};
 
 //---- Steps ----------------------------
-var step1 = new Step('Holi', 'This is a step', 'example', stepAction);
-var step2 = new Step('Holi 2', 'This is another step', 'example2', stepAction);
+var step1 = new Step('A button should look like a button', 
+					'Make people want to click', 'buttons-1', function(){});
 
-step1.getElement().addEventListener('click', stepAction, false);
+var step2 = new Step('Content is important', 
+					'Provide specific information', 'buttons-2', function(){});
+
+var step3 = new Step('Take care with contrasts', 
+					'Blue, red and also green color/backgrounds are hard to see', 'buttons-3', function(){});
 
 //---- Exercise -------------------------
-var exercise = new Exercise('Title', [step1, step2]);
+var exercise = new Exercise('Is it a button?', [step1, step2, step3]);
 
 //---- Init -----------------------------
 exercise.init();
+
 //---- Controls -------------------------
-var pageControls = new PageControls(pages, 1);
+var pageControls = new PageControls(pages, 0);
 pageControls.init();
