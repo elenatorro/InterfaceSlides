@@ -13,7 +13,7 @@ body, html {
 .col-left {
   height: 100%;
   position: relative;
-  border-right: 5px double silver;
+  border-right: 5px ridge #E5E5E5;
   background-color: rgba(255, 255, 255, 0.2); }
   .col-left > footer {
     position: absolute;
@@ -26,12 +26,55 @@ body, html {
 .col-right {
   height: 100%; }
 
+.exercises h1 {
+  font-size: 4em;
+  padding: 10px;
+  text-align: center; }
+
 .navbar {
   border-radius: 0; }
 
 .steps--list {
   list-style-type: none;
-  font-size: 3em; }
+  font-size: 3em;
+  overflow-y: scroll; }
 
 .steps--list > li {
-  visibility: hidden; }
+  line-height: 18px;
+  margin-bottom: 50px; }
+  .steps--list > li > h3 {
+    display: inline; }
+
+.visible {
+  opacity: 1; }
+
+.hidden {
+  opacity: 0; }
+
+.btn-sample {
+  padding: 20px;
+  margin: 20px;
+  font-size: 1.2em; }
+
+.btn-flat {
+  border: none;
+  border-radius: 0;
+  padding: 1; }
+
+.btn-flat:active {
+  text-decoration: none;
+  background-color: green;
+  border: none; }
+
+.btn-flat:hover {
+  cursor: initial;
+  border: none;
+  background-color: inherit; }
+
+.btn-contrast-red {
+  background-color: red;
+  color: blue; }
+
+.btn-contrast-blue {
+  background-color: blue;
+  color: red; }

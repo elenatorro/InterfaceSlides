@@ -1,0 +1,32 @@
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	background-color: orange;
+	margin: 0 auto 0 auto;
+}
+
+#line{
+    position:static;
+    height: 5px;
+    color:white;
+    background:red;
+    margin-bottom: 10px;
+}
+
+.text--orange {
+	color: orange;
+}
+
+.text--red {
+	color: red;
+}
+
+#identification-1 {
+	font-size: 24px;
+}
+
+.player-icon {
+	font-size: 1em;
+	padding: 1px;
+}
