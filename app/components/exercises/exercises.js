@@ -33,6 +33,12 @@ function Exercise(title, steps) {
 		exercise.nextStep.addEventListener('click', exercise.next, true);
 		exercise.previousStep.addEventListener('click', exercise.previous, true);
 
+		exercise.steps.forEach(function(step) {
+			this.steps.appendChild(step.createElement());
+		});
+
+		document.getElementById('exercise--title').innerHTML = exercise.title;
+
 		$(document).on("keyup", function (e) {
     		if (e.keyCode === 39) {
     			exercise.next();

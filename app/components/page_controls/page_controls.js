@@ -21,15 +21,19 @@ function PageControls(pages, index) {
 
 	this.next = function() {
 		if (pageControls.index < pageControls.pages.length-1) {
+			console.log(pageControls.pages[pageControls.index+1]);
 			return pageControls.pages[pageControls.index+1];
 		} else {
 			return pageControls.pages[pageControls.index];
 		}
 	};
 
+	this.setIndex = function(index) {
+		this.index = index;
+	};
+
 	this.previous = function() {
 		if (pageControls.index > 0) {
-			console.log('prev');
 			return pageControls.pages[pageControls.index-1];
 		} else {
 			return pageControls.pages[pageControls.index];
@@ -54,7 +58,6 @@ function PageControls(pages, index) {
 		}
 
 		$(document).on("keyup", function (e) {
-			console.log(e);
     		if (e.keyCode === 78) {
     			window.location.replace(pageControls.nextURL());
     		} else if (e.keyCode === 66) {
@@ -65,6 +68,7 @@ function PageControls(pages, index) {
 };
 
 var pages = [
-	new Page('../example/', 'index.html'),
-	new Page('../1_Button/', 'index.html')
+	new Page('../1_button/', 'button.html', 1),
+	new Page('../2_invitation/', 'invitation.html', 2),
+	new Page('../3_neededInformation/', 'neededinformation.html', 3)
 ];

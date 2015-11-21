@@ -1,10 +1,23 @@
 .steps--list {
 	list-style-type: none;
 	font-size: 3em;
+	overflow-y: scroll;
 }
 
 .steps--list {
 	> li {
-		visibility: hidden;
+		line-height: 18px;
+		margin-bottom: 50px;
+		> h3 {
+			 display: inline;
+		}
 	}
+}
+
+.visible {
+	opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
 }

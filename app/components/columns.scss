@@ -13,8 +13,9 @@
 .col-left {
 	height: 100%;
 	position: relative;
-	border-right: 5px double silver;
+	border-right: 5px ridge #E5E5E5;
 	background-color: rgba(255, 255, 255, 0.2);
+
 
   	> footer {
   		position: absolute;
@@ -28,6 +29,15 @@
 
 .col-right {
 	height: 100%;
+
+}
+
+.exercises {
+	h1 {
+		font-size: 4em;
+		padding: 10px;
+		text-align: center;
+	}
 }
 
 .navbar {
