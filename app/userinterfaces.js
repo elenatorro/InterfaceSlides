@@ -14,7 +14,7 @@ function Exercise(title, steps) {
 	this.next = function() {
 		if (exercise.currentStep < exercise.steps.length) {
 			exercise.steps[exercise.currentStep++].show();
-			return exercise.steps[exercise.currentStep];
+			return true;
 		} else {
 			return false;
 		}
@@ -23,7 +23,7 @@ function Exercise(title, steps) {
 	this.previous = function() {
 		if (exercise.currentStep > 0) {
 			exercise.steps[--exercise.currentStep].hide();
-			return exercise.steps[exercise.currentStep];
+			return true;
 		} else {
 			return false;
 		}
@@ -250,16 +250,10 @@ function PageControls(pages, pageName, exercise) {
 
 	this.keyUp = {
 		'37' : function() {
-			pageControls.exercise.previous();
-		},
-		'38' : function() {
-			window.location.replace(pageControls.nextURL());
+			pageControls.exercise.previous() || window.location.replace(pageControls.previousURL());
 		},
 		'39' : function() {
-			pageControls.exercise.next();
-		},
-		'40' : function() {
-			window.location.replace(pageControls.previousURL());
+			pageControls.exercise.next() || window.location.replace(pageControls.nextURL());
 		}
 	};
 
@@ -289,7 +283,7 @@ function PageControls(pages, pageName, exercise) {
 };
 
 var pages = [
-	new Page('../../', 'principal'),
+	new Page('../../../', 'principal'),
 	new Page('../1_button/', 'button'),
 	new Page('../2_invitation/', 'invitation'),
 	new Page('../22_dragAndDrop/', 'draganddrop'),

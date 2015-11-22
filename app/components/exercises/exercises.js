@@ -14,7 +14,7 @@ function Exercise(title, steps) {
 	this.next = function() {
 		if (exercise.currentStep < exercise.steps.length) {
 			exercise.steps[exercise.currentStep++].show();
-			return exercise.steps[exercise.currentStep];
+			return true;
 		} else {
 			return false;
 		}
@@ -23,7 +23,7 @@ function Exercise(title, steps) {
 	this.previous = function() {
 		if (exercise.currentStep > 0) {
 			exercise.steps[--exercise.currentStep].hide();
-			return exercise.steps[exercise.currentStep];
+			return true;
 		} else {
 			return false;
 		}

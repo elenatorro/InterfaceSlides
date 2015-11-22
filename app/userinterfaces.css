@@ -69,9 +69,11 @@ body, html {
 
 .steps--list > li {
   line-height: 18px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  font-size: 0.7em; }
   .steps--list > li > h3 {
-    display: inline; }
+    display: inline;
+    font-size: 1em; }
 
 .visible {
   opacity: 1; }

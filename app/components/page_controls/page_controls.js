@@ -55,16 +55,10 @@ function PageControls(pages, pageName, exercise) {
 
 	this.keyUp = {
 		'37' : function() {
-			pageControls.exercise.previous();
-		},
-		'38' : function() {
-			window.location.replace(pageControls.nextURL());
+			pageControls.exercise.previous() || window.location.replace(pageControls.previousURL());
 		},
 		'39' : function() {
-			pageControls.exercise.next();
-		},
-		'40' : function() {
-			window.location.replace(pageControls.previousURL());
+			pageControls.exercise.next() || window.location.replace(pageControls.nextURL());
 		}
 	};
 
