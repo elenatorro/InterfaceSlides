@@ -94,7 +94,7 @@ function PageControls(pages, pageName, exercise) {
 };
 
 var pages = [
-	new Page('../0_principal/', 'principal'),
+	new Page('../../', 'principal'),
 	new Page('../1_button/', 'button'),
 	new Page('../2_invitation/', 'invitation'),
 	new Page('../22_dragAndDrop/', 'draganddrop'),

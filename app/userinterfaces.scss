@@ -6,6 +6,33 @@ body, html {
 	padding: 0;
 }
 
+.centered-title {
+	text-align: center;
+	padding: 20px;
+	line-height: 2em;
+	font-size: 2em;
+	border: 10px solid white;
+	color: white;
+
+	margin-top: 50px;
+
+	> h1, h2, h3 {
+		color: white;
+	}
+
+	> h1 {
+	   font-size: 2em;
+	}
+}
+
+.start {
+	text-align: center;
+	> .btn {
+		margin: 10px;
+		font-size: 1.5em;
+	}
+}
+
 @import 'components/columns';
 @import 'components/lists';
 @import 'exercises/1_button/style';

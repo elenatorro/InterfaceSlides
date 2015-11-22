@@ -78,7 +78,6 @@ function Step(name, description, targetElement, doSomething) {
 		step.element.classList.remove('hidden');
 		step.targetElement.classList.add('visible');
 		step.targetElement.classList.remove('hidden');
-		console.log(window.location);
 		window.location.replace(window.location.pathname + step.target);
 		if (step.doSomething) {
 			step.doSomething();
@@ -290,7 +289,7 @@ function PageControls(pages, pageName, exercise) {
 };
 
 var pages = [
-	new Page('../0_principal/', 'principal'),
+	new Page('../../', 'principal'),
 	new Page('../1_button/', 'button'),
 	new Page('../2_invitation/', 'invitation'),
 	new Page('../22_dragAndDrop/', 'draganddrop'),
