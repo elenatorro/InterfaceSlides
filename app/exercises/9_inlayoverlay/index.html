@@ -7,7 +7,7 @@
     <meta name="description" content="Gulp Boilerplate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
-	  <link rel="stylesheet" href="../../components/themes/spacelab.css">
+    <link rel="stylesheet" href="../../components/themes/spacelab.css">
     <link rel="stylesheet" href="../../userinterfaces.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -47,13 +47,12 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">My Courses <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#">Link</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Preferences <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Tools</a></li>
                       <li><a href="#">Social</a></li>
-                      <li><a href="#"></a>Settings</li>
+                      <li><a href="#">Settings</a></li>
                       <li role="separator" class="divider"></li>
                       <li><a href="#">Know more...</a></li>
                       <li role="separator" class="divider"></li>
@@ -83,61 +82,65 @@
           </nav>
           </section>
           <section class="row">
-            <section id="invitations-1" class="col-md-10 col-md-offset-1 hidden">
-              <section class="panel panel-warning panel-invitation ">
-                <header class="panel-heading">
-                  Rate the course: 'Learning User Interfaces'
-                </header>
-                <section class="panel-body">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input name="rate" type="radio" aria-label="...">
-                    </span>
-                    <p class="form-control">Very Good</p>
-                  </div>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input name="rate" type="radio" aria-label="...">
-                    </span>
-                    <p class="form-control">Good</p>
-                  </div>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input name="rate" type="radio" aria-label="...">
-                    </span>
-                    <p class="form-control">Ok</p>
-                  </div>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input name="rate" type="radio" aria-label="...">
-                    </span>
-                    <p class="form-control">Bad</p>
-                  </div>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <input name="rate" type="radio" aria-label="...">
-                    </span>
-                    <p class="form-control">Very Bad</p>
-                  </div>
-                  <button id="rate" class="btn btn-success">Rate!</button>
-                  <div id="rated" class="alert alert-success hidden" role="alert">Thanks for rating!</div>
-                </section>
-              </section>
+            <section id="step-1" class="col-md-6 col-md-offset-3 hidden">
+            <form role="form">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true">
+                <div data-popover="popover-content" class="hidden">
+                  <input type="email" class="form-control" id="email">
+                  <p>You can also add another email to verify your account.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
             </section>
-            <section id="invitations-2" class="col-md-10 col-md-offset-1 hidden">
-              <section class="panel panel-success panel-invitation">
-                <header class="panel-heading">
-                  Do you want to see related courses?
-                </header>
-                <section class="panel-body">
-                <ol>
-                  <li> Click on 'Preferences' and select the fields you're interested in.</li>
-                  <li> Click on 'My Courses' to discover similar courses.</li>
-                  <li> Type any topic in the 'Search' form at the top navigation bar</li>
-                  <li><a href="">Discover this week trending courses!</a></li>
-                </ol>
-                </section>
-              </section>
+
+            <section id="step-2" class="col-md-6 hidden">
+              <button type="button" class="btn btn-block btn-lg btn-danger" id="alert-button">More info</button>
+            </section>
+
+            <section id="step-3" class="col-md-6 hidden">
+            <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">More info</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">More info</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>You need to be registered to know more information</p>
+                    <form role="form">
+                    <div class="form-group">
+                      <label for="email">Email address:</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             </section>
           </section>
       </asside>

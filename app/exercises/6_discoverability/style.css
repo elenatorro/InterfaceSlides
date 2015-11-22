@@ -1,0 +1,12 @@
+.course-content {
+    display: none;
+    background: #E5E5E5;
+}
+
+.course:hover .course-content {
+    display: block;
+}
+
+.course-controls {
+	text-align: center;
+}

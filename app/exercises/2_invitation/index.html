@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../components/themes/spacelab.css">
+	  <link rel="stylesheet" href="../../dependencies/jquery-ui.css">
     <link rel="stylesheet" href="../../userinterfaces.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -82,13 +83,68 @@
           </nav>
           </section>
           <section class="row">
-            <section id="step-1" class="col-md-12 hidden">
-
+            <section id="step-3" class="col-md-10 col-md-offset-1 hidden">
+                <form role="search">
+                  <div class="form-group">
+                    <input id="searchCourses" type="text" class="form-control" placeholder="Search courses...">
+                  </div>
+                </form>
             </section>
-            <section id="step-2" class="col-md-12 hidden">
+            <section id="step-1" class="col-md-10 col-md-offset-1 hidden">
+              <section class="panel panel-warning panel-invitation ">
+                <header class="panel-heading">
+                  Rate the course: 'Learning User Interfaces'
+                </header>
+                <section class="panel-body">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Very Good</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Good</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Ok</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Bad</p>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <input name="rate" type="radio" aria-label="...">
+                    </span>
+                    <p class="form-control">Very Bad</p>
+                  </div>
+                  <button id="rate" class="btn btn-success">Rate!</button>
+                  <div id="rated" class="alert alert-success hidden" role="alert">Thanks for rating!</div>
+                </section>
+              </section>
             </section>
-
-            <section id="step-3" class="col-md-12 hidden">
+            <section id="step-2" class="col-md-10 col-md-offset-1 hidden">
+              <section class="panel panel-success panel-invitation">
+                <header class="panel-heading">
+                  Do you want to see related courses?
+                </header>
+                <section class="panel-body">
+                <ol>
+                  <li> Click on 'Preferences' and select the fields you're interested in.</li>
+                  <li> Click on 'My Courses' to discover similar courses.</li>
+                  <li> Type any topic in the 'Search' form at the top navigation bar</li>
+                  <li><a href="">Discover this week trending courses!</a></li>
+                </ol>
+                </section>
+              </section>
             </section>
           </section>
       </asside>
@@ -96,6 +152,7 @@
     </section>
   <script src="../../../bower_components/jquery/dist/jquery.js"></script>
   <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../dependencies/jquery-ui.js"></script>
   <script src="../../userinterfaces.js"></script>
   <script src="script.js"></script>
 </body>

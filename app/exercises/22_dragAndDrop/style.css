@@ -1,0 +1,27 @@
+.sortable-list {
+  list-style-type: none;
+  padding: none;
+}
+
+.sortable-list li {
+  padding: 10px;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.draggable {
+  cursor: pointer;
+}
+
+.ui-state-default {
+  margin-left: 0;
+}
+
+.draggableCourse {
+  z-index: 100;
+}
+
+.droppable-courses {
+  padding: 10px;
+  font-size: 18px;
+}

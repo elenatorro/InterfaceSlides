@@ -1,0 +1,15 @@
+.col-right {
+  background-image: url("../../images/elenatorro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  opacity: 0.5;
+/*  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;*/
+}

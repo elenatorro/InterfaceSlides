@@ -47,13 +47,12 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="#">My Courses <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#">Link</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Preferences <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Tools</a></li>
                       <li><a href="#">Social</a></li>
-                      <li><a href="#"></a>Settings</li>
+                      <li><a href="#">Settings</a></li>
                       <li role="separator" class="divider"></li>
                       <li><a href="#">Know more...</a></li>
                       <li role="separator" class="divider"></li>
@@ -82,21 +81,29 @@
             </div>
           </nav>
           </section>
-          <section class="row">
-            <section id="identification-1" class="col-md-12 hidden">
-              <p class="text--red">Line: Time to reach the target</p>
-              <div id="line"></div>
-              <p class="text--orange">Circle: The target you want to reach</p>
-              <div id="target" class="circle"></div>
+          <section id="step-1" class="wrapper hidden">
+            <section class="row">
+              <section class="col-md-12">
+                <p class="text--red">Line: Time to reach the target</p>
+                <div id="line"></div>
+                <div id="time-to-target"></div>
+                <p class="text--orange">Shape: The target you want to reach</p>
+                <div id="target" class="shape"></div>
+              </section>
+              <section class="col-md-12 fitts-law-example">
+                <img class="img-responsive" alt="Fitt's Law Example" src="../../images/fittslaw1.gif"/>
+                <img class="img-responsive" alt="Fitt's Law Example" src="../../images/fittslaw2.gif"/>
+                Image credits: <a href="http://www.particletree.com/features/visualizing-fittss-law/" target="_blank">Visualize Fitt's Law</a>
+              </section>
             </section>
           </section>
 
-<!-- ### identification-2 ############################################################################# -->
+<!-- ### step-2 ############################################################################# -->
 
-          <section id="identification-2" class="wrapper hidden">
+          <section id="step-2" class="wrapper hidden">
               <div class="row">
                   <div class="col-md-6">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
+                    <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                   </div>
                   <div class="col-md-6">
                       <h2>All your courses</h2>
@@ -110,7 +117,7 @@
                       <p class="blurry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
                   </div>
                   <div class="col-md-6">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
+                      <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                   </div>
               </div>
               <hr>
@@ -123,17 +130,17 @@
               </div>
               <div class="row">
                   <div class="col-md-4">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/350x250" alt="">
+                      <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                       <h2>Best courses</h2>
                       <a class="btn btn-default" href="#">More Info</a>
                   </div>
                   <div class="col-md-4">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/350x250" alt="">
+                      <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                       <h2>News</h2>
                       <a class="btn btn-default" href="#">More Info</a>
                   </div>
                   <div class="col-md-4">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/350x250" alt="">
+                      <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                       <h2>Universities</h2>
                       <a class="btn btn-default" href="#">More Info</a>
                   </div>
@@ -142,23 +149,23 @@
           </section>
 <!-- ################################################################################################### -->
 
-<!-- ### identification-3 ############################################################################## -->
+<!-- ### step-3 ############################################################################## -->
 
-          <section id="identification-3" class="wrapper hidden">
+          <section id="step-3" class="wrapper hidden">
               <div class="row">
                   <div class="col-md-6">
-                      <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
+                      <img class="img-responsive" alt="Course image" src="../../images/course.png"/>
                   </div>
                   <div class="col-md-6">
-                      <h2>Watch Video</h2>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-search player-icon" aria-hidden="true"></span></button>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-stop player-icon" aria-hidden="true"></span></button>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-pause player-icon" aria-hidden="true"></span></button>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-play player-icon" aria-hidden="true"></span></button>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-menu-right player-icon" aria-hidden="true"></span></button>                      
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-volume-up player-icon" aria-hidden="true"></span></button>
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-volume-off player-icon" aria-hidden="true"></span></button>                      
-                      <button class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk player-icon" aria-hidden="true"></span></button>
+                      <h2>Watch Course</h2>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-search player-icon" aria-hidden="true"></span></button>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-stop player-icon" aria-hidden="true"></span></button>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-pause player-icon" aria-hidden="true"></span></button>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-play player-icon" aria-hidden="true"></span></button>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-menu-right player-icon" aria-hidden="true"></span></button>                      
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-volume-up player-icon" aria-hidden="true"></span></button>
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-volume-off player-icon" aria-hidden="true"></span></button>                      
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk player-icon" aria-hidden="true"></span></button>
                   </div>
               </div>
           </section>

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../components/themes/spacelab.css">
+    <link rel="stylesheet" href="../../dependencies/jquery-ui.css">
     <link rel="stylesheet" href="../../userinterfaces.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -81,21 +82,53 @@
             </div>
           </nav>
           </section>
+          <section class="wrapper">
           <section class="row">
             <section id="step-1" class="col-md-12 hidden">
-
+              <ul id="draggable" class="sortable-list">
+                <li class="alert alert-danger">Course 1</li>
+                <li class="alert alert-danger">Course 2</li>
+                <li class="alert alert-danger">Course 3</li>
+                <li class="alert alert-danger">Course 4</li>
+              </ul>
             </section>
             <section id="step-2" class="col-md-12 hidden">
+              <ul id="sortable" class="sortable-list">
+                <li class="alert alert-info draggable">Course 1</li>
+                <li class="alert alert-info draggable">Course 2</li>
+                <li class="alert alert-info draggable">Course 3</li>
+                <li class="alert alert-info draggable">Course 4</li>
+              </ul>
             </section>
+          </section>
 
             <section id="step-3" class="col-md-12 hidden">
+            <section class="row">
+              <section class="col-md-12">
+                <h2>Drop your courses here</h2>
+                <section class="panel panel-primary">
+                  <section id="droppableCourse" class="panel-body droppable-courses">
+                  </section>
+                </section>
+              </section>
+            </section>
+            <section class="col-md-12">
+              <ul class="sortable-list">
+                <li class="alert alert-info draggable draggableCourse">Course 1</li>
+                <li class="alert alert-info draggable draggableCourse">Course 2</li>
+                <li class="alert alert-info draggable draggableCourse">Course 3</li>
+                <li class="alert alert-info draggable draggableCourse">Course 4</li>
+              </ul>
+              </section>
+            </section>
             </section>
           </section>
       </asside>
       </section>
     </section>
   <script src="../../../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../dependencies/jquery-ui.js"></script>
+  <script src="../../bootstrap/dist/js/bootstrap.js"></script>
   <script src="../../userinterfaces.js"></script>
   <script src="script.js"></script>
 </body>

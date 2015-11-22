@@ -1,0 +1,17 @@
+.scroll {
+	max-height: 300px;
+	overflow-y: scroll;
+	border: 2px solid #e5e5e5;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+#loading-area{
+        height: 550px;
+        overflow: auto;
+    }

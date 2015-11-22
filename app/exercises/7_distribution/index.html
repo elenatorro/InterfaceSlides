@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interfaces</title>
+    <meta name="description" content="Gulp Boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
+	  <link rel="stylesheet" href="../../components/themes/spacelab.css">
+    <link rel="stylesheet" href="../../userinterfaces.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container full-container">
+      <section class="row full-container">
+      <asside class="col-lg-5 col-left">
+        <section class="row">
+          <section class="col-md-12 exercises">
+            <h1 id="exercise--title">Title</h1>
+            <ul id="steps" class="steps--list">
+            </ul>
+          </section>
+        </section>
+        <footer>
+            <button class="btn btn-primary" id="previous-step"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+            <button class="btn btn-primary" id="next-step"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            <br>
+            <a class="btn btn-link" id="previous-page"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Previous Page</a>
+            <a class="btn btn-link" id="next-page">Next Page <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+        </footer>
+      </asside>
+
+      <asside class="col-lg-7 col-right">
+        <section class="row">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">App</a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">My Courses <span class="sr-only">(current)</span></a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Preferences <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Tools</a></li>
+                      <li><a href="#">Social</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Know more...</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Help</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Go!</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Contact</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Change Profile</a></li>
+                      <li><a href="#">Your Network</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </section>
+
+<!-- ### Information 1   ############################################################################# -->
+    <div id="step-1" class="wrapper hidden">
+      <div class="row">
+        <div class="col-lg-8">
+            <h1>User Interfaces Course</h1>
+            <p class="lead">
+                by <a href="#">Online Academy</a>
+            </p>
+            <hr>
+            <p><span class="glyphicon glyphicon-time"></span> Posted on November 27, 2015 at 9:00 PM</p>
+            <hr>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+          </div>
+      </div>
+    </div>
+
+<!-- ### Information 2   ############################################################################# -->
+    <div id="step-2" class="wrapper hidden">
+   <div class="row">
+      <div class="col-lg-8">
+          <h1>User Interfaces Course</h1>
+          <p class="lead">
+              by <a href="#">Online Academy</a>
+          </p>
+          <hr>
+          <p><span class="glyphicon glyphicon-time"></span> Posted on November 27, 2015 at 9:00 PM</p>
+          <hr>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+          <hr>
+                <div class="well">
+                    <h4>Add a Comment:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Elena
+                            <small>November 26, 2015 at 9:30 PM</small>
+                        </h4>
+                        When is the next online class? Thanks!
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Teacher
+                            <small>November 26, 2015 at 9:30 PM</small>
+                        </h4>
+                        Hi Elena, it's tomorrow morning, will you attend?
+                        <!-- Nested Comment -->
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Elena
+                                    <small>November 26, 2015 at 9:30 PM</small>
+                                </h4>
+                                Of course!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h4>Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="">
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ### Information 3   ############################################################################# -->
+    <div id="step-3" class="wrapper hidden">
+    <div class="row">
+      <div class="col-lg-8">
+        <ol class="breadcrumb">
+          <li><a href="#">My Courses</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li class="active">User Interfaces</li>
+        </ol>
+          <h1>User Interfaces Course</h1>
+          <p class="lead">
+              by <a href="#">Online Academy</a>
+          </p>
+          <hr>
+          <p><span class="glyphicon glyphicon-time"></span> Posted on November 27, 2015 at 9:00 PM</p>
+          <hr>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+          <hr>
+                <div class="well">
+                    <h4>Add a Comment:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Elena
+                            <small>November 26, 2015 at 9:30 PM</small>
+                        </h4>
+                        When is the next online class? Thanks!
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Teacher
+                            <small>November 26, 2015 at 9:30 PM</small>
+                        </h4>
+                        Hi Elena, it's tomorrow morning, will you attend?
+                        <!-- Nested Comment -->
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Elena
+                                    <small>November 26, 2015 at 9:30 PM</small>
+                                </h4>
+                                Of course!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h4>Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="">
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                                <li><a href="#">Category</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      </asside>
+      </section>
+    </section>
+  <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../userinterfaces.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

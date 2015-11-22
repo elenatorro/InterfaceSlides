@@ -82,21 +82,72 @@
           </nav>
           </section>
           <section class="row">
-            <section id="step-1" class="col-md-12 hidden">
-
+            <section id="step-1" class="col-md-10 col-md-offset-1 sample hidden">
+            <h2>Join the class now!</h2>
+            <button type="button" id="wait-button" data-loading-text="Loading..." class="btn btn-info" autocomplete="off">
+              Join!
+            </button>
+            <div id="joined" class="alert alert-warning hidden" role="alert">Congrats! You just enrolled the course.</div>
             </section>
-            <section id="step-2" class="col-md-12 hidden">
+            <section id="step-2" class="col-md-10 col-md-offset-1 sample hidden">
+              <button class="btn btn-info" id="enroll">Reload</button>
+              <div class="modal js-loading-bar">
+               <div class="modal-dialog">
+                 <div class="modal-content">
+                   <div class="modal-body">
+                     <div class="progress progress-popup">
+                      <div class="progress-bar progress-bar-success"></div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
             </section>
-
-            <section id="step-3" class="col-md-12 hidden">
+          </section>
+          <section id="step-3" class="row hidden sample">
+            <section class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="usr">Name:</label>
+                  <input type="text" class="progress-input form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Username:</label>
+                  <input type="text" class="progress-input form-control" id="usrname">
+                </div>
+                <div class="form-group">
+                  <label for="usr">email:</label>
+                  <input type="text" class="progress-input form-control" id="email">
+                </div>
+                <div class="form-group">
+                  <label for="usr">age</label>
+                  <input type="text" class="progress-input form-control" id="age">
+                </div>
+              </form>
+              <div class="progress progress-striped active">
+                  <div class="progress-bar progress-bar-s" id="progress-info-bar"></div>
+              </div>
+            </section>
+            <section class="col-md-6">
+              <section class="panel panel-primary">
+              <header class="panel-heading"><h4>Your information preview: </h4></header>
+              <section class="panel-body">
+                  <ul>
+                  <li>Name:<span class="form-preview"></span></li>
+                  <li>Username:<span class="form-preview"></span></li>
+                  <li>Email:<span class="form-preview"></span></li>
+                  <li>Age: <span class="form-preview"></span></li>
+                </ul>
+              </section>
+              </section>
             </section>
           </section>
       </asside>
       </section>
     </section>
   <script src="../../../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="../../userinterfaces.js"></script>
+  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
