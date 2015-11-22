@@ -1,6 +1,9 @@
 body, html {
   height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: #f25a5a;
+  margin: 0 0;
+  padding: 0; }
 
 .container.full-container {
   padding: 0; }
@@ -13,8 +16,9 @@ body, html {
 .col-left {
   height: 100%;
   position: relative;
-  border-right: 5px ridge #E5E5E5;
-  background-color: rgba(255, 255, 255, 0.2); }
+  display: block; }
+  .col-left > h1, .col-left h2, .col-left h3, .col-left h4, .col-left p, .col-left a {
+    color: white; }
   .col-left > footer {
     position: absolute;
     bottom: 0;
@@ -24,11 +28,16 @@ body, html {
     text-align: center; }
 
 .col-right {
-  height: 100%; }
+  height: 100%;
+  display: block;
+  position: static;
+  overflow-y: scroll;
+  background-color: white; }
 
 .exercises h1 {
   font-size: 4em;
   padding: 10px;
+  color: white;
   text-align: center; }
 
 .navbar {

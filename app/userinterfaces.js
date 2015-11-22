@@ -38,14 +38,6 @@ function Exercise(title, steps) {
 		});
 
 		document.getElementById('exercise--title').innerHTML = exercise.title;
-
-		$(document).on("keyup", function (e) {
-    		if (e.keyCode === 39) {
-    			exercise.next();
-    		} else if (e.keyCode === 37) {
-    			exercise.previous();
-    		}
-		});
 	};
 
 	this.getCurrentStep = function() {
@@ -63,6 +55,7 @@ function Step(name, description, targetElement, doSomething) {
 	var step         = this;
 	this.name        = name;
 	this.description = description;
+	this.target      = '#' + targetElement;
 	this.targetElement = document.getElementById(targetElement);
 	this.stepsList   = document.getElementById('steps');
 	this.doSomething = doSomething; 
@@ -85,6 +78,8 @@ function Step(name, description, targetElement, doSomething) {
 		step.element.classList.remove('hidden');
 		step.targetElement.classList.add('visible');
 		step.targetElement.classList.remove('hidden');
+		console.log(window.location);
+		window.location.replace(window.location.pathname + step.target);
 		if (step.doSomething) {
 			step.doSomething();
 		}
@@ -99,30 +94,131 @@ function Step(name, description, targetElement, doSomething) {
 
 	return step;
 };
+/* npm text-stats -->  https://www.npmjs.com/package/text-stats */
+var textStats = {
+	stats: function(text) {
+		var data;
+		if (text.length) {
+			data = {
+				sentences: this.sentences(text),
+				words: this.words(text),
+				syllables: this.syllables(text),
+				characters: this.characters(text),
+				carpar: this.charactersWords(text),
+				gulpease: this.gulpease(text),
+				gunningFog: this.gunningFog(text)
+			};
+		}
+		return data;
+	},
+	findSentences : function(text) {
+		var sentence, sentences, result, _i, _len;
+		sentences = text.split(".");
+		result = [];
+		for (_i = 0, _len = sentences.length; _i < _len; _i++) {
+			sentence = sentences[_i];
+			if (sentence.trim() !== "") {
+				result.push(sentence);
+			}
+		}
+		return result;
+	},
+
+	sentences : function(text) {
+		return this.findSentences(text).length;
+	},
+
+	findWords : function(sentence) {
+		return sentence.match(/[A-z\u00E0-\u00FC]+/g);
+	},
+
+	words : function(sentence) {
+		return this.findWords(sentence).length;
+	},
+
+	findSyllables : function(word) {
+		word = word.toLowerCase();
+		if (word.length <= 3) {
+			return 1;
+		}
+		word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+		word = word.replace(/^y/, '');
+		return word.match(/[aeiouy]{1,2}/g);
+	},
+
+	syllables : function(word) {
+		return this.findSyllables(word).length;
+	},
+
+	characters : function(sentence) {
+		var word, tot, _i, _len;
+		sentence = this.findWords(sentence);
+		tot = 0;
+		for (_i = 0, _len = sentence.length; _i < _len; _i++) {
+			word = sentence[_i];
+			if (word !== null) {
+				tot += word.length;
+			}
+		}
+		return tot;
+	},
+
+	charactersWords : function(sentence) {
+		var result, tot;
+		tot = this.characters(sentence);
+		result = tot / this.words(sentence);
+		return result.toFixed(1);
+	},
+
+	gulpease : function(text) {
+		var _characters, _sentences, _words, _result;
+		_sentences = this.sentences(text);
+		_characters = this.characters(text);
+		_words = this.words(text);
+		_result = 89 + ((300 * _sentences) - 10 * _characters) / _words;
+		return parseInt(_result, 10);
+	},
+
+	gunningFog : function(text) {
+		var word, _sentences, _i, _len, _words, _wordsComplesse, _result;
+		_sentences = this.sentences(text);
+		_words = this.words(text);
+		_wordsComplesse = 0;
+		for (_i = 0, _len = _words.length; _i < _len; _i++) {
+			word = _words[_i];
+			if (this.syllables(word) > 2) {
+				_wordsComplesse += 1;
+			}
+		}
+		_result = 0.4 * ((_words / _sentences) + 100 * (_wordsComplesse / _words));
+		return parseInt(_result, 10);
+	}
+};
 function Page(path, name) {
 	var page = this;
 
 	this.path  = path;
 	this.name  = name;
+	this.file  = 'index.html';
 
 	this.getURL = function() {
-		return page.path + page.name;
+		return page.path + page.file;
 	};
 
 	return page;
 };
 
-function PageControls(pages, index) {
+function PageControls(pages, pageName, exercise) {
 	var pageControls = this;
-
 	this.pages        = pages;
-	this.index        = index;
+	this.pageName     = pageName;
+	this.exercise     = exercise;
+	this.index        = 0;
 	this.nextPage     = document.getElementById('next-page');
 	this.previousPage = document.getElementById('previous-page');
 
 	this.next = function() {
 		if (pageControls.index < pageControls.pages.length-1) {
-			console.log(pageControls.pages[pageControls.index+1]);
 			return pageControls.pages[pageControls.index+1];
 		} else {
 			return pageControls.pages[pageControls.index];
@@ -145,11 +241,36 @@ function PageControls(pages, index) {
 		return pageControls.next().getURL();
 	};
 
+	this.getURL = function() {
+		return pageControls.pages[pageControls.index].getURL();
+	};
+
 	this.previousURL = function() {
 		return pageControls.previous().getURL();
 	};
 
+	this.keyUp = {
+		'37' : function() {
+			pageControls.exercise.previous();
+		},
+		'38' : function() {
+			window.location.replace(pageControls.nextURL());
+		},
+		'39' : function() {
+			pageControls.exercise.next();
+		},
+		'40' : function() {
+			window.location.replace(pageControls.previousURL());
+		}
+	};
+
 	this.init = function() {
+		pageControls.pages.forEach(function(page, index) {
+			if (pageControls.pageName == page.name) {
+				pageControls.index = index;
+			}
+		});
+
 		if (pageControls.nextPage) {
 			pageControls.nextPage.setAttribute('href', pageControls.nextURL());
 		}
@@ -158,18 +279,29 @@ function PageControls(pages, index) {
 			pageControls.previousPage.setAttribute('href', pageControls.previousURL());
 		}
 
+		var next, prev;
+
 		$(document).on("keyup", function (e) {
-    		if (e.keyCode === 78) {
-    			window.location.replace(pageControls.nextURL());
-    		} else if (e.keyCode === 66) {
-    			window.location.replace(pageControls.previousURL());
-    		}
+			if (pageControls.keyUp[e.keyCode]) {
+				pageControls.keyUp[e.keyCode]();
+			}
 		});
 	};
 };
 
 var pages = [
-	new Page('../1_button/', 'button.html', 1),
-	new Page('../2_invitation/', 'invitation.html', 2),
-	new Page('../3_neededInformation/', 'neededinformation.html', 3)
+	new Page('../0_principal/', 'principal'),
+	new Page('../1_button/', 'button'),
+	new Page('../2_invitation/', 'invitation'),
+	new Page('../22_dragAndDrop/', 'draganddrop'),
+	new Page('../3_neededInformation/', 'neededInformation'),
+	new Page('../4_textInformation/', 'textinformation'),
+	new Page('../5_identification/', 'identification'),
+	new Page('../6_discoverability/', 'discoverability'),
+	new Page('../7_distribution/', 'distribution'),
+	new Page('../9_inlayoverlay/', 'inlayoverlay'),
+	new Page('../10_loadingStatus/', 'loadingStatus'),
+	new Page('../13_scrolling/', 'scrolling'),
+	new Page('../14_useTabs/', 'usetabs'),
+	new Page('../15_transitions/', 'transitions')
 ];
