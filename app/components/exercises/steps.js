@@ -2,6 +2,7 @@ function Step(name, description, targetElement, doSomething) {
 	var step         = this;
 	this.name        = name;
 	this.description = description;
+	this.target      = '#' + targetElement;
 	this.targetElement = document.getElementById(targetElement);
 	this.stepsList   = document.getElementById('steps');
 	this.doSomething = doSomething; 
@@ -24,6 +25,8 @@ function Step(name, description, targetElement, doSomething) {
 		step.element.classList.remove('hidden');
 		step.targetElement.classList.add('visible');
 		step.targetElement.classList.remove('hidden');
+		console.log(window.location);
+		window.location.replace(window.location.pathname + step.target);
 		if (step.doSomething) {
 			step.doSomething();
 		}

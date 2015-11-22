@@ -13,9 +13,10 @@
 .col-left {
 	height: 100%;
 	position: relative;
-	border-right: 5px ridge #E5E5E5;
-	background-color: rgba(255, 255, 255, 0.2);
-
+	display: block;
+	> h1, h2, h3, h4, p, a {
+		color: white;
+	}
 
   	> footer {
   		position: absolute;
@@ -29,13 +30,17 @@
 
 .col-right {
 	height: 100%;
-
+	display: block;
+	position: static;
+	overflow-y: scroll;
+	background-color: white;
 }
 
 .exercises {
 	h1 {
 		font-size: 4em;
 		padding: 10px;
+		color: white;
 		text-align: center;
 	}
 }

@@ -38,14 +38,6 @@ function Exercise(title, steps) {
 		});
 
 		document.getElementById('exercise--title').innerHTML = exercise.title;
-
-		$(document).on("keyup", function (e) {
-    		if (e.keyCode === 39) {
-    			exercise.next();
-    		} else if (e.keyCode === 37) {
-    			exercise.previous();
-    		}
-		});
 	};
 
 	this.getCurrentStep = function() {
