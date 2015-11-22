@@ -2,7 +2,6 @@
 # npm
 ############################
 node_modules
-bower_components
 .gitattributes
 .editorconfig
 /test
