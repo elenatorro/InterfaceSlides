@@ -3,7 +3,6 @@
   "description": "Interactive presentation for interface examples",
   "homepage": "https://github.com/elenatorro/lookjs",
   "version": "0.1.0",
-  "main": "./lib/Look.js",
   "authors": [
     {
       "name": "Elena Torró",

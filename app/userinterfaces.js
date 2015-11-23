@@ -78,7 +78,6 @@ function Step(name, description, targetElement, doSomething) {
 		step.element.classList.remove('hidden');
 		step.targetElement.classList.add('visible');
 		step.targetElement.classList.remove('hidden');
-		console.log(window.location);
 		window.location.replace(window.location.pathname + step.target);
 		if (step.doSomething) {
 			step.doSomething();
