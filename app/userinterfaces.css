@@ -32,11 +32,15 @@ body, html {
   width: 100%;
   margin: 0 0; }
 
-.col-left {
-  height: 100%;
+.col-side, .col-left, .col-right {
+  min-height: 100%;
   position: relative;
   display: block;
-  overflow-y: auto; }
+  padding-bottom: 30px; }
+
+.col-left {
+  position: fixed;
+  float: left; }
   .col-left > h1, .col-left h2, .col-left h3, .col-left h4, .col-left p, .col-left a {
     color: white; }
   .col-left > footer {
@@ -48,10 +52,7 @@ body, html {
     text-align: center; }
 
 .col-right {
-  height: 100%;
-  display: block;
-  position: static;
-  overflow-y: auto;
+  float: right;
   background-color: white; }
 
 .exercises h1 {

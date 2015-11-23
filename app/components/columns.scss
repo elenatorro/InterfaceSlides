@@ -10,12 +10,17 @@
   	margin: 0 0;
 }
 
-.col-left {
-	height: 100%;
+.col-side {
+	min-height: 100%;
 	position: relative;
 	display: block;
-	overflow-y: auto;
-	
+	padding-bottom: 30px;
+};
+
+.col-left {
+	@extend .col-side;
+	position: fixed;
+	float: left;
 	> h1, h2, h3, h4, p, a {
 		color: white;
 	}
@@ -31,10 +36,8 @@
 }
 
 .col-right {
-	height: 100%;
-	display: block;
-	position: static;
-	overflow-y: auto;
+	@extend .col-side;
+	float: right;
 	background-color: white;
 }
 
