@@ -70,11 +70,11 @@ function PageControls(pages, pageName, exercise) {
 		});
 
 		if (pageControls.nextPage) {
-			pageControls.nextPage.setAttribute('href', pageControls.nextURL());
+			pageControls.nextPage.addEventListener('click', pageControls.keyUp['39']);
 		}
 
 		if (pageControls.previousPage) {
-			pageControls.previousPage.setAttribute('href', pageControls.previousURL());
+			pageControls.previousPage.addEventListener('click', pageControls.keyUp['37']);
 		}
 
 		var next, prev;
@@ -88,7 +88,9 @@ function PageControls(pages, pageName, exercise) {
 };
 
 var pages = [
-	new Page('../../../', 'principal'),
+	new Page('../0_principal/', 'principal'),
+	new Page('../0_definition/', 'definition'),
+	new Page('../0_history/', 'history'),
 	new Page('../1_button/', 'button'),
 	new Page('../2_invitation/', 'invitation'),
 	new Page('../22_dragAndDrop/', 'draganddrop'),
@@ -101,5 +103,6 @@ var pages = [
 	new Page('../10_loadingStatus/', 'loadingStatus'),
 	new Page('../13_scrolling/', 'scrolling'),
 	new Page('../14_useTabs/', 'usetabs'),
-	new Page('../15_transitions/', 'transitions')
+	new Page('../15_transitions/', 'transitions'),
+	new Page('../_last/', 'end')
 ];

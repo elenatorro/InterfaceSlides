@@ -30,9 +30,6 @@ function Exercise(title, steps) {
 	};
 
 	this.init = function() {
-		exercise.nextStep.addEventListener('click', exercise.next, true);
-		exercise.previousStep.addEventListener('click', exercise.previous, true);
-
 		exercise.steps.forEach(function(step) {
 			this.steps.appendChild(step.createElement());
 		});
@@ -56,7 +53,7 @@ function Step(name, description, targetElement, doSomething) {
 	this.name        = name;
 	this.description = description;
 	this.target      = '#' + targetElement;
-	this.targetElement = document.getElementById(targetElement);
+	this.targetElement = document.getElementById(targetElement) || document.body;
 	this.stepsList   = document.getElementById('steps');
 	this.doSomething = doSomething; 
 	this.template    = '<h3><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  ' + this.name + '<h3><h4> ' + this.description + '</h4>';
@@ -265,11 +262,11 @@ function PageControls(pages, pageName, exercise) {
 		});
 
 		if (pageControls.nextPage) {
-			pageControls.nextPage.setAttribute('href', pageControls.nextURL());
+			pageControls.nextPage.addEventListener('click', pageControls.keyUp['39']);
 		}
 
 		if (pageControls.previousPage) {
-			pageControls.previousPage.setAttribute('href', pageControls.previousURL());
+			pageControls.previousPage.addEventListener('click', pageControls.keyUp['37']);
 		}
 
 		var next, prev;
@@ -283,7 +280,9 @@ function PageControls(pages, pageName, exercise) {
 };
 
 var pages = [
-	new Page('../../../', 'principal'),
+	new Page('../0_principal/', 'principal'),
+	new Page('../0_definition/', 'definition'),
+	new Page('../0_history/', 'history'),
 	new Page('../1_button/', 'button'),
 	new Page('../2_invitation/', 'invitation'),
 	new Page('../22_dragAndDrop/', 'draganddrop'),
@@ -296,5 +295,6 @@ var pages = [
 	new Page('../10_loadingStatus/', 'loadingStatus'),
 	new Page('../13_scrolling/', 'scrolling'),
 	new Page('../14_useTabs/', 'usetabs'),
-	new Page('../15_transitions/', 'transitions')
+	new Page('../15_transitions/', 'transitions'),
+	new Page('../_last/', 'end')
 ];

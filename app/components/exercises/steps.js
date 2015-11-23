@@ -3,7 +3,7 @@ function Step(name, description, targetElement, doSomething) {
 	this.name        = name;
 	this.description = description;
 	this.target      = '#' + targetElement;
-	this.targetElement = document.getElementById(targetElement);
+	this.targetElement = document.getElementById(targetElement) || document.body;
 	this.stepsList   = document.getElementById('steps');
 	this.doSomething = doSomething; 
 	this.template    = '<h3><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  ' + this.name + '<h3><h4> ' + this.description + '</h4>';

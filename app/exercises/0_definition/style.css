@@ -1,0 +1,9 @@
+.col-right {
+	visibility: hidden;
+}
+
+.col-left {
+	width: 100%;
+	font-size: 2.3em;
+	overflow: auto;
+}

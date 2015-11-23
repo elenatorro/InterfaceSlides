@@ -1,0 +1,11 @@
+img.img-history {
+	height: inherit;
+	width: inherit;
+	left: 0;
+	position: absolute;
+	opacity: 0.8;
+}
+
+.col-right {
+	background-color: transparent;
+}

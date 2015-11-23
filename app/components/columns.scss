@@ -19,13 +19,13 @@
 
 .col-left {
 	@extend .col-side;
-	position: fixed;
 	float: left;
 	> h1, h2, h3, h4, p, a {
 		color: white;
 	}
 
   	> footer {
+  		// position: fixed;
   		position: absolute;
   		bottom: 0;
   		left: 0;

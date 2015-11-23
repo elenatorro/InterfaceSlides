@@ -1,0 +1,17 @@
+img.img-responsive {
+	height: inherit;
+	width: 45%;
+	display: inline-block;
+	left: 0;
+	margin: 0 auto 0 auto;
+}
+
+.big-info {
+	font-size: 3em;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.interrogation {
+	font-size: 7em;
+}

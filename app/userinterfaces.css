@@ -6,23 +6,26 @@ body, html {
   padding: 0; }
 
 .centered-title {
+  width: 40%;
   text-align: center;
   padding: 20px;
   line-height: 2em;
   font-size: 2em;
   border: 10px solid white;
   color: white;
-  margin-top: 50px; }
+  margin: 60px auto 0 auto; }
   .centered-title > h1, .centered-title h2, .centered-title h3 {
     color: white; }
   .centered-title > h1 {
     font-size: 2em; }
 
 .start {
-  text-align: center; }
+  text-align: center;
+  display: block; }
   .start > .btn {
     margin: 10px;
-    font-size: 1.5em; }
+    font-size: 2em;
+    background-color: transparent; }
 
 .container.full-container {
   padding: 0; }
@@ -39,7 +42,6 @@ body, html {
   padding-bottom: 30px; }
 
 .col-left {
-  position: fixed;
   float: left; }
   .col-left > h1, .col-left h2, .col-left h3, .col-left h4, .col-left p, .col-left a {
     color: white; }
