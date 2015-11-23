@@ -36,7 +36,7 @@ body, html {
   height: 100%;
   position: relative;
   display: block;
-  overflow-y: scroll; }
+  overflow-y: auto; }
   .col-left > h1, .col-left h2, .col-left h3, .col-left h4, .col-left p, .col-left a {
     color: white; }
   .col-left > footer {
@@ -51,7 +51,7 @@ body, html {
   height: 100%;
   display: block;
   position: static;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: white; }
 
 .exercises h1 {

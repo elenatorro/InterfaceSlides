@@ -14,7 +14,7 @@
 	height: 100%;
 	position: relative;
 	display: block;
-	overflow-y: scroll;
+	overflow-y: auto;
 	
 	> h1, h2, h3, h4, p, a {
 		color: white;
@@ -34,7 +34,7 @@
 	height: 100%;
 	display: block;
 	position: static;
-	overflow-y: scroll;
+	overflow-y: auto;
 	background-color: white;
 }
 
