@@ -42,6 +42,7 @@ body, html {
   padding-bottom: 30px; }
 
 .col-left {
+  position: fixed;
   float: left; }
   .col-left > h1, .col-left h2, .col-left h3, .col-left h4, .col-left p, .col-left a {
     color: white; }

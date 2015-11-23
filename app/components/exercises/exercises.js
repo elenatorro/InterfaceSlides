@@ -30,9 +30,6 @@ function Exercise(title, steps) {
 	};
 
 	this.init = function() {
-		exercise.nextStep.addEventListener('click', exercise.next, true);
-		exercise.previousStep.addEventListener('click', exercise.previous, true);
-
 		exercise.steps.forEach(function(step) {
 			this.steps.appendChild(step.createElement());
 		});
