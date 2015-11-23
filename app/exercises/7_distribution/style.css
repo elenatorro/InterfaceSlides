@@ -2,3 +2,8 @@
 	border: 2px solid red;
 	padding: 3px;
 }
+
+.media-object {
+	width: 64px;
+	height: 64px;
+}

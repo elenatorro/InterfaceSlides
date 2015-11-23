@@ -8,18 +8,19 @@
 	border: none;
 	border-radius: 0;
 	padding: 1;
+	background-color: #f06;
 }
 
 .btn-flat:active {
 	text-decoration: none;
-	background-color: green;
+	background-color: #f06;
 	border: none;
 }
 
 .btn-flat:hover {
 	cursor: initial;
 	border: none;
-	background-color: inherit;
+	background-color: #f06;
 }
 
 .btn-contrast-red {
