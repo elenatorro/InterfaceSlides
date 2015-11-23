@@ -41,12 +41,6 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
-// gulp.task('connect', function() {
-//   connect.server({
-//     root: 'app/exercises/example',
-//   });
-// });
-
 gulp.task('watch', function() {
     gulp.watch(assetsPath + scriptExtension, ['scripts']);
     gulp.watch([assetsPath + styleRootExtension, 'app/userinterfaces.scss'], ['styles']);
