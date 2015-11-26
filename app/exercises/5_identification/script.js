@@ -1,6 +1,6 @@
 //---- Actions --------------------------
-function drawLine(mouse) {
-	var shape = document.getElementById('target').getBoundingClientRect();
+function calculateFitts(mouse, target, timeTarget) {
+	shape = document.getElementById(target).getBoundingClientRect();
 	var shapeWidth  = shape.width;
 	var shapeHeight = shape.height;
 
@@ -14,20 +14,19 @@ function drawLine(mouse) {
     run=endPoint[0]-startPoint[0],
     width=Math.sqrt((rise*rise)+(run*run));
 
-	var line=document.getElementById('line');
-	line.style.top=startPoint[0]+'px';
-	line.style.left=startPoint[1]+'px';
-	line.style.width=width+"px";
-
-	calculateFitts(0.02, 1, width, shapeWidth);
-
+	drawFitts(0.02, 1, width, shapeWidth, timeTarget);
 };
 
-function calculateFitts(a, b, D, W) {
-	document.getElementById('time-to-target').innerHTML = a + b*Math.log2(D/W + 1);
+function getShapes(mouse) {
+	calculateFitts(mouse, 'target', 'time-to-target');
+	calculateFitts(mouse, 'target2', 'time-to-target2');
+};
+
+function drawFitts(a, b, D, W, timeTarget) {
+	document.getElementById(timeTarget).innerHTML = a + b*Math.log2(D/W + 1);
 }
 function seeShape() {
-	document.body.addEventListener("mousemove", drawLine, true);
+	document.body.addEventListener("mousemove", getShapes, true);
 };
 
 function hideFittsLaw() {

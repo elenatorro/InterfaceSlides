@@ -294,7 +294,8 @@ var pages = [
 	new Page('../9_inlayoverlay/', 'inlayoverlay'),
 	new Page('../10_loadingStatus/', 'loadingStatus'),
 	new Page('../13_scrolling/', 'scrolling'),
-	new Page('../14_useTabs/', 'usetabs'),
 	new Page('../15_transitions/', 'transitions'),
+	new Page('../19_accordions/', 'accordions'),
+	new Page('../14_useTabs/', 'usetabs'),
 	new Page('../_last/', 'end')
 ];

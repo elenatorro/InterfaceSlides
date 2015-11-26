@@ -12,14 +12,14 @@ var hideOthers = function() {
 
 //---- Steps ----------------------------
 var step1 = new Step('Titles', 
-					'Use title to distribute information.', 
+					'Use title levels to distribute and classify information.', 
 					'step-1', hideOthers);
 
-var step2 = new Step('Containers', 'Define what belongs together', 'step-2', hideOthers);
-
-var step3 = new Step('Hierarchy', 
+var step2 = new Step('Hierarchy', 
 					'People tend to classify things, and it helps to know where you are', 
-					'step-3', hideOthers);
+					'step-2', hideOthers);
+
+var step3 = new Step('You are here', 'Don\'t let your users get lost', 'step-3', hideOthers);
 
 
 //---- Exercise -------------------------

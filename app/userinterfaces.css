@@ -64,6 +64,13 @@ body, html {
   color: white;
   text-align: center; }
 
+.exercises h3 {
+  font-size: 2em; }
+
+.exercises h4 {
+  font-size: 0.8em;
+  line-height: 1.2em; }
+
 .navbar {
   border-radius: 0; }
 

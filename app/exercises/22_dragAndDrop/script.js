@@ -32,13 +32,13 @@ function drop() {
 
 //---- Steps ----------------------------
 var step1 = new Step('Feedback and invitations', 
-                    'Indicate draggability.', 'step-1', drag);
+                    'An element can be dragged.', 'step-1', drag);
 
 var step2 = new Step('Dragging', 
-                    '', 'step-2', sort);
+                    'An element is being dragged.', 'step-2', sort);
 
 var step3 = new Step('Dropping', 
-                    'Make it direct. Keep user informed.', 'step-3', drop);
+                    'An element can be dropped in a specific area', 'step-3', drop);
 
 var step4 = new Step('Alternative ways', 
                     'Provide alternative ways to interact with the site instead of using only drag and drop', 'step-3', function(){});

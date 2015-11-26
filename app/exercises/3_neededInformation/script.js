@@ -11,13 +11,13 @@ var hideOthers = function() {
 };
 //---- Steps ----------------------------
 var step1 = new Step('Use conventions', 
-					'We all learned to read a structured information', 'step-1', hideOthers);
+					'We all learned to read structured information', 'step-1', hideOthers);
 
 var step2 = new Step('People don\'t read pages, people scan pages', 
-					'They will only focus on certain elements', 'step-2', hideOthers);
+					'Users will only focus on certain elements', 'step-2', hideOthers);
 
 var step3 = new Step('Delete unnecessary information', 
-					'Reduces noise, makes useful content prominent, reduces redundancy', 
+					'Reduce noise, make useful content prominent, reduce redundancy', 
 					'step-3', hideOthers);
 
 

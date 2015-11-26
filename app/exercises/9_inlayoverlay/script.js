@@ -20,7 +20,7 @@ var step1 = new Step('Inlay popover',
 var step2 = new Step('Don\'t user alerts','Alerts are evil', 'step-2');
 
 var step3 = new Step('Overlay best practices', 
-					'Provide more information', 
+					'Use them to let the user stay on the page. Use it instead of pop ups. Use lightbox effect. Avoid idiot boxes.', 
 					'step-3');
 
 

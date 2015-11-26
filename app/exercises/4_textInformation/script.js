@@ -21,7 +21,7 @@ document.getElementById('calculate-readability').addEventListener('click', funct
 });
 
 //---- Steps ----------------------------
-var step1 = new Step('Paragraph structure', 
+var step1 = new Step('Progressive disclosure', 
 					'People prefer to read short-width columns, although we read faster single-wide columns', 'step-1', hideOthers);
 
 var step2 = new Step('Screens are not paper, contrast matters', 
