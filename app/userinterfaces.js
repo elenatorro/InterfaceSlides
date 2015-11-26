@@ -297,5 +297,5 @@ var pages = [
 	new Page('../15_transitions/', 'transitions'),
 	new Page('../19_accordions/', 'accordions'),
 	new Page('../14_useTabs/', 'usetabs'),
-	new Page('../_last/', 'end')
+	new Page('../last/', 'end')
 ];
