@@ -25,8 +25,6 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "jquery-ui": "~1.11.4",
-    "bootstrap-tour": "~0.10.2",
-    "Tourist.js": "tourist#~0.1.2"
+    "jquery-ui": "~1.11.4"
   }
 }
